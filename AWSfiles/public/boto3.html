@@ -74,8 +74,10 @@
             <button type="submit" class="btn btn-primary">Launch</button>
         </form>
         <div id="result"></div>
-        <div><li><a class="btn btn-primary" href="index.html">All Task</a></li></div>
-    </div>
+        <div>
+         <button onclick="window.location.href='index.html'" class="btn btn-primary">All Task</button>
+        </div>
+  </div>
     <script>
         document.getElementById('launch-form').addEventListener('submit', function(event) {
             event.preventDefault();
