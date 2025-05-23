@@ -83,12 +83,12 @@
 </head>
 <main id="bg-video">
     <video autoplay muted loop id="bg-video">
-      <source src="/AWSfiles/public/templates/dark-spiderman-neon-moewalls-com.mp4" type="video/mp4">
+      <source src="dark-spiderman-neon-moewalls-com.mp4" type="video/mp4">
     </video>
 <body>
     <div class="container">
         <h2>Create S3 Bucket</h2>
-        <form action="/cgi-bin/AWSfiles/s3_bucket.py" method="post">
+        <form action="/cgi-bin/s3_bucket.py" method="post">
             <input type="hidden" name="action" value="create_bucket">
            <h2><label for="bucket_name">Bucket Name:</label></h2>
             <input type="text" id="bucket_name" name="bucket_name" required>
@@ -97,7 +97,7 @@
         </form>
 
         <h2>Upload File to S3 Bucket</h2>
-        <form action="/cgi-bin/AWSfiles/s3_bucket.py" method="post" enctype="multipart/form-data">
+        <form action="/cgi-bin/s3_bucket.py" method="post" enctype="multipart/form-data">
             <input type="hidden" name="action" value="upload_file">
            <h2><label for="bucket_name">Select Bucket:</label></h2>
             <select id="bucket_name" name="bucket_name" required>
@@ -108,7 +108,7 @@
             <input type="file" id="file" name="file" required>
             <br><br>
             <input type="submit" value="Upload File">
-            <div><li><a class="btn text-white py-3 px-6 rounded font-semibold transition transform hover:scale-105" href="/AWSfiles/public/index.html">All Task</a></li></div>
+            <div><li><a class="btn text-white py-3 px-6 rounded font-semibold transition transform hover:scale-105" href="index.html">All Task</a></li></div>
         </form>
        
 
