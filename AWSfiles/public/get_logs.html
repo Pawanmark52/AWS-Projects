@@ -53,7 +53,7 @@
 </head>
 <body class="text-white flex flex-col items-center justify-center min-h-screen p-4">
     <h1 class="text-4xl font-bold mb-8">Get Logs</h1>
-    <form action="/cgi-bin/AWSfiles/get_logs.py" method="post" class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-lg space-y-6">
+    <form action="/cgi-bin/get_logs.py" method="post" class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-lg space-y-6">
         <div>
             <label for="logGroupName" class="block text-sm font-medium mb-2">Log Group Name:</label>
             <input type="text" id="logGroupName" name="logGroupName" placeholder="Enter Log Group Name" class="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 outline-none text-gray-300">
@@ -75,7 +75,7 @@
             <input type="text" id="regionName" name="regionName" placeholder="Enter Region Name" class="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 outline-none text-gray-300">
         </div>
         <button type="submit" class="btn text-white py-3 px-6 rounded font-semibold transition transform hover:scale-105">Get Logs</button>
-        <div><li><a class="btn text-white py-3 px-6 rounded font-semibold transition transform hover:scale-105" href="/AWSfiles/public/index.html">All Task</a></li></div>
+        <div><li><a class="btn text-white py-3 px-6 rounded font-semibold transition transform hover:scale-105" href="index.html">All Task</a></li></div>
     </form>
     <div id="result" class="mt-6 p-4 bg-gray-800 rounded-lg w-full max-w-lg text-gray-300"></div>
 
@@ -85,7 +85,7 @@
             var formData = new FormData(event.target);
             var params = new URLSearchParams(formData);
 
-            fetch('/cgi-bin/AWSfiles/get_logs.py', {
+            fetch('/cgi-bin/get_logs.py', {
                 method: 'POST',
                 body: params
             })
@@ -99,7 +99,7 @@
 </body>
 <main id="bg-video">
     <video autoplay muted loop id="bg-video">
-      <source src="/AWSfiles/public/templates/dark-spiderman-neon-moewalls-com.mp4" type="video/mp4">
+      <source src="dark-spiderman-neon-moewalls-com.mp4" type="video/mp4">
     </video>
 </html>
 
